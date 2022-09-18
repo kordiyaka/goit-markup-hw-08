@@ -127,6 +127,15 @@ body {
 .hero {
   text-align: center;
   padding: 200px 0;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -176,6 +185,34 @@ body {
 
 .advantages-list {
   display: flex;
+}
+
+.advantages-list .item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--additional-background-color);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item:nth-child(1)::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.item:nth-child(2)::before {
+  background-image: url(../images/clock.svg);
+}
+
+.item:nth-child(3)::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.item:nth-child(4)::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .advantages-title {
