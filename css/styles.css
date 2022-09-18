@@ -115,6 +115,32 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  align-items: center;
+}
+
+.contact .list-item {
+  display: flex;
+  align-items: center;
+}
+
+.list-item:hover .icon-envelope,
+.list-item:hover .icon-smartphone {
+  fill: var(--accent-color);
+}
+
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
 }
 
 /* Hero section */
