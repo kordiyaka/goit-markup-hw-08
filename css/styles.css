@@ -342,6 +342,39 @@ body {
 }
 
 
+/* Our clients */
+
+.clients {
+  display: flex;
+}
+
+.clients-item {
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients .icon {
+  display: block;
+  fill: var(--icon-color);
+}
+
+.clients-item:hover .icon {
+  fill: var(--accent-color);
+}
+
+.clients-item:hover {
+  border: 1px solid var(--accent-color);
+}
+
 /* Footer */
 
 .footer {
