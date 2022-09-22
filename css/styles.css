@@ -129,13 +129,13 @@ body {
 
 .icon-envelope {
   width: 16px;
-  height: 12px;
+  height: 16px;
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
 
 .icon-smartphone {
-  width: 10px;
+  width: 16px;
   height: 16px;
   margin-right: 10px;
   fill: var(--primary-text-color);
