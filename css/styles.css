@@ -325,12 +325,6 @@ body {
   border-radius: 50%;
 }
 
-
-.join-list .link:hover {
-  background-color: var(--accent-color);
-  border-radius: 50%;
-}
-
 .social-link {
   display: flex;
   justify-content: center;
@@ -437,16 +431,26 @@ body {
   display: flex;
 }
 
-.join-list .social-item {
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
   border-radius: 50%;
 }
 
-.join-list .icon {
+.footer-link .icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-color);
-  display: block;
 }
 
 /* Our works section*/
@@ -492,7 +496,11 @@ body {
   margin-bottom: 30px;
 }
 
-.works .item:hover {
+.works .link {
+  display: block;
+}
+
+.works .link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
