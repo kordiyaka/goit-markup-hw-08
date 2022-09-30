@@ -322,7 +322,6 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 .social-link {
@@ -331,6 +330,7 @@ body {
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 
 .social-item:not(:last-child) {
@@ -439,12 +439,12 @@ body {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 .footer-link .icon {
