@@ -57,7 +57,7 @@
         Ефективні рішення для <br />
         вашого бізнесу
       </h1>
-      <button class="hero-button" type="button">Замовити послугу</button>
+      <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
     </section>
     <!-- Our advantages -->
     <section class="advantages section">
@@ -121,12 +121,15 @@
         <ul class="what-we-do-list list">
           <li class="item">
             <img class="img" src="./images/img1.jpg" alt="Робочий стіл з клавіатурою та монітором" width="370" />
+            <p class="text">Десктопні додатки</p>
           </li>
           <li class="item">
             <img class="img" src="./images/img2.jpg" alt="Ноутбук та телефон" width="370" />
+            <p class="text">Мобільні додатки</p>
           </li>
           <li class="item">
             <img class="img" src="./images/img3.jpg" alt="Планшет на якому зображено спект кольорів" width="370" />
+            <p class="text">Дизайнерські рішення</p>
           </li>
         </ul>
       </div>
@@ -351,7 +354,8 @@
               </svg></a>
           </li>
           <li class="social-item">
-            <a class="footer-link" href=""><svg class="icon">
+            <a class="footer-link" href="">
+              <svg class="icon">
                 <use href="./images/symbol-defs.svg#icon-linkedin"></use>
               </svg></a>
           </li>
@@ -359,6 +363,16 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn" data-modal-close>
+        <svg class="icon" width="11px" height="11px">
+          <use href="./images/symbol-defs.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

@@ -106,9 +106,21 @@ body {
 }
 
 .header .list-item {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .contact {
@@ -201,6 +213,7 @@ body {
   background-color: var(--accent-color-additional);
 }
 
+
 /* Our advantages section */
 
 .visually-hidden {
@@ -266,6 +279,25 @@ body {
 
 .what-we-do-list {
   display: flex;
+}
+
+.what-we-do .item {
+  position: relative;
+}
+
+.what-we-do .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Our team section*/
@@ -496,12 +528,18 @@ body {
   margin-bottom: 30px;
 }
 
-.works .link {
+.works-link {
+  position: relative;
   display: block;
 }
 
-.works .link:hover {
+.works-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.works-link:hover .our-work-paragraph,
+.works-link:focus .our-work-paragraph {
+  opacity: 1;
 }
 
 .works .item:nth-child(3n) {
@@ -541,4 +579,64 @@ body {
   line-height: 1.9;
   margin-top: 4px;
   margin-bottom: 0;
+}
+
+.our-work-paragraph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--primary-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+
+/* Backdrop + modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  top: 50%;
+  left: 50%;
+  margin-top: 222px;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-color);
 }
