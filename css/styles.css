@@ -15,6 +15,7 @@
   --icon-color: #afb1b8;
 }
 
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
@@ -100,6 +101,11 @@ body {
   margin-right: 50px;
 }
 
+.list-item {
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .list-item:hover,
 .list-item:focus {
   color: var(--accent-color);
@@ -139,24 +145,18 @@ body {
 
 
 
-.icon-envelope {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-}
-
+.icon-envelope,
 .icon-smartphone {
   width: 16px;
   height: 16px;
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list-item:hover .icon-envelope {
-  fill: var(--accent-color);
-}
 
+.list-item:hover .icon-envelope,
 .list-item:hover .icon-smartphone {
   fill: var(--accent-color);
 }
@@ -206,6 +206,8 @@ body {
   padding: 10px 32px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -349,11 +351,8 @@ body {
   height: 20px;
   fill: var(--icon-color);
   display: block;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
@@ -363,6 +362,13 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
 }
 
 .social-item:not(:last-child) {
@@ -389,6 +395,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:not(:last-child) {
@@ -398,6 +406,8 @@ body {
 .clients .icon {
   display: block;
   fill: var(--icon-color);
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .icon,
@@ -472,6 +482,8 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -508,6 +520,10 @@ body {
   border-radius: 4px;
   padding: 6px 22px;
   border: none;
+  transition: color 250ms;
+  transition: backgound-color 250ms;
+  transition: box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -529,18 +545,15 @@ body {
 }
 
 .works-link {
-  position: relative;
   display: block;
+  transition: box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.works-link:hover .our-work-paragraph,
-.works-link:focus .our-work-paragraph {
-  opacity: 1;
-}
 
 .works .item:nth-child(3n) {
   margin-right: 0;
@@ -581,6 +594,11 @@ body {
   margin-bottom: 0;
 }
 
+.works-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 .our-work-paragraph {
   position: absolute;
   top: 0;
@@ -591,8 +609,14 @@ body {
   line-height: 28px;
   color: var(--primary-color);
   background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  opacity: 0;
+.works-link:hover .our-work-paragraph,
+.works-link:focus .our-work-paragraph {
+  transform: translateY(0);
 }
 
 
@@ -609,17 +633,16 @@ body {
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
 .modal {
   position: absolute;
-  display: flex;
-  justify-content: end;
   top: 50%;
   left: 50%;
-  margin-top: 222px;
   transform: translate(-50%, -50%);
+  margin-top: 222px;
   min-width: 528px;
   min-height: 581px;
   background-color: var(--primary-color);
@@ -628,15 +651,20 @@ body {
 }
 
 .modal-btn {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  right: 0;
   width: 30px;
   height: 30px;
   margin-top: 8px;
   margin-right: 8px;
+  padding: 0;
   border: solid 1px;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--primary-color);
+  cursor: pointer;
 }
