@@ -660,3 +660,27 @@ body {
   background-color: var(--primary-color);
   cursor: pointer;
 }
+
+.form {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+}
+
+.policy {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
