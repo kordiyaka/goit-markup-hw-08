@@ -477,21 +477,25 @@
             </li>
           </ul>
         </div>
+        <form class="subscribe">
+          <div class="form-field">
+            <label for="mail-subscribe">Підпишіться на розсилку</label>
+            <input type="email" name="mail-subscribe" id="mail-subscribe" />
+          </div>
+          <button type="submit">Підписатися</button>
+        </form>
       </div>
-      <form>
-        <label for="mail-subscribe">Підпишіться на розсилку</label>
-        <input type="email" name="mail-subscribe" id="mail-subscribe" />
-        <button type="submit">Підписатися</button>
-      </form>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-btn" data-modal-close>
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="icon" width="11px" height="11px">
             <use href="./images/symbol-defs.svg#icon-cross"></use>
           </svg>
         </button>
-        <p class="centered">Залиште свої дані, ми вам передзвонимо</p>
+        <p class="modal-action centered">
+          Залиште свої дані, ми вам передзвонимо
+        </p>
         <form class="form">
           <div class="form-field">
             <label for="name">Ім'я</label>
@@ -510,17 +514,22 @@
 
           <div class="form-field">
             <label for="comment">Коментар</label>
-            <textarea name="comment" id="comment" rows="10"></textarea>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
           </div>
 
           <div class="policy centered">
             <input type="checkbox" name="policy" id="policy" />
             <label for="policy"
-              >Погоджуюся з розсилкою та приймаю Умови договору</label
-            >
+              >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+            </label>
           </div>
 
-          <button type="submit" class="">Відправити</button>
+          <button type="submit" class="modal-send-btn">Відправити</button>
         </form>
       </div>
     </div>
