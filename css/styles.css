@@ -730,6 +730,10 @@ body {
   cursor: pointer;
 }
 
+.modal-close-btn:active svg {
+  fill: var(--accent-color);
+}
+
 .modal-action {
   margin-top: 40px;
   margin-bottom: 12px;
@@ -758,7 +762,6 @@ body {
   fill: var(--accent-color);
 }
 
-
 .form-field label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -780,8 +783,6 @@ textarea:focus {
   border-color: var(--accent-color);
   outline: none;
 }
-
-
 
 .form-field textarea {
   resize: none;
