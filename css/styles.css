@@ -754,6 +754,11 @@ body {
   flex-direction: column;
 }
 
+.form-field:focus-within svg {
+  fill: var(--accent-color);
+}
+
+
 .form-field label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -765,11 +770,22 @@ body {
 .form-field textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
 }
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+
 
 .form-field textarea {
   resize: none;
+  padding: 12px 16px;
 }
 
 .form-field svg {
@@ -801,6 +817,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
   padding: 10px 52px;
   font-weight: 700;
   font-size: 16px;
