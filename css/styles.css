@@ -488,7 +488,7 @@ body {
 
 .subscribe {
   display: flex;
-  margin-left: 93px;
+  margin-left: auto;
   align-items: flex-end;
 }
 
@@ -728,14 +728,16 @@ body {
   border-radius: 50%;
   background-color: var(--primary-color);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:active svg {
+.modal-close-btn:focus svg,
+.modal-close-btn:hover {
   fill: var(--accent-color);
 }
 
 .modal-action {
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -744,11 +746,10 @@ body {
 }
 
 .form {
-  margin-left: 40px;
-  margin-right: 40px;
+  padding: 40px;
 }
 
-.form .form-field:not(:last-child) {
+.form-field:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
@@ -789,6 +790,7 @@ textarea:focus {
 .form-field textarea {
   resize: none;
   padding: 12px 16px;
+  height: 120px;
 }
 
 .form-field svg {
@@ -813,7 +815,6 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 30px;
 }
 
 .policy-checkbox {
@@ -847,7 +848,7 @@ textarea:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-top: 30px;
   padding: 10px 52px;
   font-weight: 700;
   font-size: 16px;
