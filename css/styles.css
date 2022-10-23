@@ -239,7 +239,7 @@ body {
   display: flex;
 }
 
-.advantages__list .advantages__card {
+.advantages__card {
   display: flex;
   align-items: center;
   justify-content: center;
