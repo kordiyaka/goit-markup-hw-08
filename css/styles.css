@@ -66,7 +66,8 @@ body {
 .advantages__item:not(:last-child),
 .what-we-do__item:not(:last-child),
 .team__item:not(:last-child),
-.clients__item:not(:last-child) {
+.clients__item:not(:last-child),
+.works__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -637,7 +638,7 @@ body {
   overflow: hidden;
 }
 
-.card-border {
+.works__card-border {
   border-right: 1px solid;
   border-bottom: 1px solid;
   border-left: 1px solid;
@@ -648,11 +649,11 @@ body {
   padding-left: 24px;
 }
 
-.img {
+.works__img {
   display: block;
 }
 
-.our-works-title {
+.works__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -661,7 +662,7 @@ body {
   margin: 0;
 }
 
-.our-works-text {
+.works__text {
   font-size: 16px;
   line-height: 1.9;
   margin-top: 4px;
