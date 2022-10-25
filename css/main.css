@@ -52,6 +52,17 @@ body {
   margin: -1px;
 }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.logo__text {
+  color: #2196f3;
+}
+
 .page-header {
   border-bottom: 1px solid;
   border-color: #ececec;
@@ -77,17 +88,6 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #212121;
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-}
-
-.logo__text {
-  color: #2196f3;
 }
 
 .navigation__list {
