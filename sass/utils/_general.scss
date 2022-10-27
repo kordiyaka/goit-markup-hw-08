@@ -46,7 +46,10 @@ body {
   }
   
   .item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+    
   }
 
   .visually-hidden {

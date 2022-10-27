@@ -1,11 +1,38 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .clients__list {
+
+@media screen and (min-width: $mobile) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
+    
+  }
+
+  .clients__item {
+    @media screen and (min-width: $mobile) {
+      width:calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+  }
+  
   
   .clients__link {
     border: 1px solid $icon-color;
     border-radius: 4px;
-    width: 170px;
     height: 92px;
     display: flex;
     justify-content: center;
@@ -15,6 +42,10 @@
     &:hover,
     &:focus {
       border: 1px solid $accent-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 170px;
     }
   }
   

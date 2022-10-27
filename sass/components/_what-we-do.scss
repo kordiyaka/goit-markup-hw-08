@@ -1,27 +1,36 @@
-  
-.what-we-do {
+  .what-we-do {
     padding-bottom: 94px;
+
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
   }
-  
+
   .what-we-do__title,
   .team__main-title,
   .clients__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2;
     color: $title-text-color;
-    margin-top: 0;
-    margin-bottom: 50px;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+
   }
-  
+
   .what-we-do__list {
     display: flex;
   }
-  
+
   .what-we-do__item {
     position: relative;
   }
-  
+
   .what-we-do__text {
     position: absolute;
     left: 0;
