@@ -117,14 +117,33 @@ body {
   }
 }
 
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button__menu {
+  width: 24px;
+  height: 16px;
+}
+
+.menu-button__close {
+  width: 18px;
+  height: 18px;
+}
+
 .navigation__list {
-  margin-left: 93px;
+  display: none;
 }
 @media screen and (min-width: 1200px) {
   .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: 93px;
   }
 }
 
@@ -172,6 +191,11 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .contact {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contact {
