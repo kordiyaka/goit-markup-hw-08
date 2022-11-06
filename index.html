@@ -25,12 +25,27 @@
           <a href="./index.html" class="logo link">
             <span class="logo__text">Web</span>Studio</a
           >
-          <button type="button" class="menu-button">
-          <svg>
-            <use class="menu-button__menu" href="./images/symbol-defs.svg#icon-menu_button"></use>
-            <use class="menu-button__close" href="./images/symbol-defs.svg#icon-cross"></use>
-          </svg>
-        </button>
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              width="40px"
+              height="40px"
+              aria-label="Переключатель мобільного меню"
+            >
+              <use
+                class="menu-button__menu"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+              <use
+                class="menu-button__close"
+                href="./images/symbol-defs.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
           <ul class="navigation__list list">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link link current"
@@ -46,6 +61,23 @@
               <a href="" class="navigation__link link">Контакти</a>
             </li>
           </ul>
+          <div class="menu-container" data-menu>
+            <ul class="list">
+            <li class="">
+              <a href="./index.html" class="link current"
+                >Студія</a
+              >
+            </li>
+            <li class="">
+              <a href="./portfolio.html" class=" link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="">
+              <a href="" class="link">Контакти</a>
+            </li>
+          </ul>
+          </div>
         </nav>
         <ul class="contact list">
           <li class="contact__item item">
@@ -66,7 +98,6 @@
           </li>
         </ul>
       </div>
-
     </header>
     <main>
       <!--Hero section-->
@@ -569,5 +600,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
