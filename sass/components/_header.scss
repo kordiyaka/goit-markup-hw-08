@@ -5,9 +5,14 @@
 }
 
 .navigation-contact {
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
@@ -32,7 +37,7 @@
   border: none;
   background-color: transparent;
 
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 767px) {
     display: none;
   }
 }
@@ -72,9 +77,9 @@
 .navigation__list {
   display: none;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     display: flex;
-    margin-left: 93px;
+    margin-left: 87px;
   }
 }
 
@@ -96,7 +101,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     position: relative;
   }
 }
@@ -104,7 +109,7 @@
 .current {
   color: $accent-color;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     &::after {
       content: "";
       position: absolute;
@@ -124,13 +129,25 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
 
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     display: none;
   }
 
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
+  }
+}
+
+.contact__item {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    font-size: 12px;
+  }
+}
+
+.contact__item:not(:last-child) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 10px;
   }
 }
 
@@ -157,5 +174,10 @@
 
   .contact__link:hover & {
     fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 14px;
+    height: 14px;
   }
 }

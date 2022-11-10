@@ -24,7 +24,7 @@ body {
     margin: 0 auto;
 
     @media screen and (min-width: $mobile) {
-      width: 320px;
+      min-width: 320px;
     }
 
     @media screen and (min-width: $tablet) {
