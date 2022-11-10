@@ -27,8 +27,9 @@
           >
           <button
             type="button"
-            class="menu-button is-open"
+            class="menu-button"
             aria-expanded="false"
+            aria-controls="menu-container"
             data-menu-button
           >
             <svg
@@ -61,7 +62,7 @@
               <a href="" class="navigation__link link">Контакти</a>
             </li>
           </ul>
-          <div class="menu-container" data-menu>
+          <div class="menu-container" id="menu-container" data-menu>
             <ul class="list">
             <li class="">
               <a href="./index.html" class="link current"
@@ -539,7 +540,7 @@
         </form>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
           <svg class="close-btn__icon" width="11px" height="11px">
@@ -598,7 +599,7 @@
           <button type="submit" class="send-btn">Відправити</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>

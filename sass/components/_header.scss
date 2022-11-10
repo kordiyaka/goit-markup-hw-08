@@ -6,7 +6,8 @@
 
 .navigation-contact {
   @media screen and (min-width: $mobile) {
-    padding-top: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -20,19 +21,20 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: $title-text-color;
-
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 }
 
 .menu-button {
   display: inline-block;
-  margin: 0;
+  margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: 1199px) {
+    display: none;
+  }
 }
 
 .menu-button .menu-button__close {
@@ -40,11 +42,11 @@
 }
 
 .menu-button.is-open .menu-button__close {
-display: block;
+  display: block;
 }
 
 .menu-button.is-open .menu-button__menu {
-display: none;
+  display: none;
 }
 
 .menu-container {
