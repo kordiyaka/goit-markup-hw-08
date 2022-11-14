@@ -54,6 +54,16 @@
   display: none;
 }
 
+.menu-button__close:hover,
+.menu-button__menu:hover {
+  fill: $accent-color;
+}
+
+.menu-button__close:focus,
+.menu-button__menu:focus {
+  fill: $accent-color;
+}
+
 .menu-container {
   display: none;
   position: absolute;
@@ -72,6 +82,21 @@
   &.is-open {
     display: block;
   }
+}
+
+.menu-container__contacts {
+  margin-top: 300px;
+}
+
+.menu-container__social {
+  display: flex;
+}
+
+.menu-container__link {
+  font-weight: 500;
+  font-size: 18px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .navigation__list {
