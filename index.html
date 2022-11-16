@@ -18,7 +18,7 @@
   <header class="page-header">
     <div class="navigation-contact container">
       <nav class="navigation">
-        <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+        <div class="menu-container js-menu-container" id="mobile-menu">
           <div class="menu-container__navigation">
             <ul class="mobile-menu list">
               <li class="item">
@@ -50,15 +50,19 @@
               <li class="menu-container__item"><a href="" class="link">LinkedIn</a></li>
             </ul>
           </div>
-
+          <button type="button" class="menu-toggle js-close-menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg width="40px" height="40px" aria-label="Переключатель мобільного меню">
+            <use class="menu-button__close" href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
         </div>
         <a href="./index.html" class="logo link">
           <span class="logo__text">Web</span>Studio</a>
-        <button type="button" class="menu-button menu-toggle js-open-menu js-close-menu" aria-expanded="false"
-          aria-controls="mobile-menu" data-menu-button>
+        <button type="button" class="menu-toggle js-open-menu" aria-expanded="false"
+          aria-controls="mobile-menu">
           <svg width="40px" height="40px" aria-label="Переключатель мобільного меню">
             <use class="menu-button__menu" href="./images/symbol-defs.svg#icon-menu"></use>
-            <use class="menu-button__close" href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
         <ul class="navigation__list list">
