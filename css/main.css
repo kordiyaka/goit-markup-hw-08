@@ -28,6 +28,11 @@ body {
     min-width: 320px;
   }
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -401,7 +406,7 @@ body {
   margin-top: 0;
   margin-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.4;
@@ -501,6 +506,7 @@ body {
 
 .advantages__title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
   color: #212121;
@@ -708,9 +714,11 @@ body {
   fill: #ffffff;
 }
 
-.clients {
-  padding-top: 60px;
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 1199px) {
@@ -747,7 +755,7 @@ body {
     margin: 15px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .clients__item {
     width: 210px;
     margin: 15px;
