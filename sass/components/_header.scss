@@ -65,32 +65,31 @@
 }
 
 .menu-container {
-
   display: none;
-
 
   &.is-open~.logo {
     display: none;
   }
 
   @media screen and (min-width: $mobile) and (max-width: 767px) {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 48px;
+    bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
 
     padding-left: 40px;
     padding-bottom: 48px;
 
-    height: 796px;
-
     background-color: $primary-color;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
   }
-
 }
 
 .menu-container__navigation .item {
@@ -102,7 +101,7 @@
 }
 
 .menu-container__contacts {
-  margin-top: 300px;
+  margin-top: auto;
 }
 
 .menu-container__tel {
